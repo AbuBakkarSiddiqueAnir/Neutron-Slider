@@ -1,6 +1,7 @@
 .neutron-slider {
     position: relative;
     display: block;
+    width: 100%;
     box-sizing: border-box;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -14,28 +15,23 @@
 }
 
 .neutron-slider-list {
-    position: relative;
     overflow: hidden;
-    display: block;
-    margin: 0;
-    padding: 0;
 }
 
 .neutron-slider-track {
-    position: relative;
-    top: 0;
-    left: 0;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
+    align-items: stretch;
+    max-height: 470px;
+    will-change: transform
 }
 
 .neutron-slide {
-    display: block;
-    float: left;
-    height: 100%;
-    min-height: 1px;
-    outline: none;
+    flex: 0 0 auto;
+    margin: 0 10px;
+    transform: scale(0.8);
+    border-radius: 12px;
+    transition: transform .5s ease,opacity .5s ease;
+    pointer-events: none;
 }
 
 .neutron-slide img {
@@ -49,7 +45,7 @@
 
 /* Center Mode */
 .neutron-slide.center-slide {
-    transform: scale(0.8);
+    transform: scale(1);
     transition: transform 300ms ease;
 }
 

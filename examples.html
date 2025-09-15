@@ -10,10 +10,7 @@
             font-family: sans-serif;
             padding: 2rem;
         }
-        .slider-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
+
     </style>
 </head>
 <body>
@@ -34,10 +31,11 @@
         $(document).ready(function(){
             $('.neutron-slider').neutronSlider({
                 slidesToShow: 3,
-                // centerMode: true,
+                centerMode: true,
+                gap:20,
                 dots: false,
                 loop: true,
-                autoplay: false
+                autoplay: true
             });
         });
     </script>
