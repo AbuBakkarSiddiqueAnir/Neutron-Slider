@@ -235,7 +235,7 @@ class NeutronSlider {
           ? $(this.options.appendDots)
           : this.options.appendDots;
       if (!dotsContainer) return;
-      const dotList = $("<ul></ul>");
+      const dotList = $("<ul class='neutron-dots'></ul>");
       const dotCount = this.#getDotCount();
       for (let i = 0; i < dotCount; i++) {
         dotList.append(
@@ -243,7 +243,7 @@ class NeutronSlider {
         );
       }
       this.#$dots = dotList.appendTo(dotsContainer);
-      this.#$dots.find("li").first().addClass("active");
+      this.#$dots.find("li").first().addClass("neutron-slide-active");
     }
   }
 
@@ -403,8 +403,8 @@ class NeutronSlider {
   #updateDots() {
     if (this.#$dots) {
       const dotIndex = this.#getDotIndex();
-      this.#$dots.find("li").removeClass("active");
-      this.#$dots.find("li").eq(dotIndex).addClass("active");
+      this.#$dots.find("li").removeClass("neutron-slide-active");
+      this.#$dots.find("li").eq(dotIndex).addClass("neutron-slide-active");
     }
   }
   private onDotClick(e: JQuery.ClickEvent): void {
@@ -508,12 +508,12 @@ class NeutronSlider {
       transition: dontAnimate ? "none" : this.#transitionStyle,
     });
 
-    this.#$slides.removeClass(`active ${this.options.centerClass}`);
+    this.#$slides.removeClass(`neutron-slide-active ${this.options.centerClass}`);
     const half = Math.floor(slidesToShow / 2);
 
     const start = roundedCurrentIndex - half;
     const end = roundedCurrentIndex + half + 1;
-    this.#$slides.slice(start, end).addClass("active");
+    this.#$slides.slice(start, end).addClass("neutron-slide-active");
     this.#$slides.eq(roundedCurrentIndex).addClass(this.options.centerClass);
   }
 

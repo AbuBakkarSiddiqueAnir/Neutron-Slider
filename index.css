@@ -110,7 +110,7 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.neutron-dots li.active button:before {
+.neutron-dots li.neutron-slide-active button:before {
     opacity: .75;
     color: black;
 }

@@ -1,11 +1,11 @@
-# te-slider
+# Neutron-slider
 
 A simple and lightweight jQuery slider plugin written in TypeScript.
 
 ## Installation
 
 ```bash
-npm install te-slider
+npm install Neutron-slider
 ```
 
 ## Usage
@@ -14,7 +14,7 @@ Include jQuery and the plugin's JavaScript and CSS files in your HTML:
 
 ```html
 <head>
-    <link rel="stylesheet" href="dist/te-slider.css">
+    <link rel="stylesheet" href="dist/index.css">
 </head>
 <body>
     <div class="my-slider">
@@ -24,10 +24,10 @@ Include jQuery and the plugin's JavaScript and CSS files in your HTML:
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="dist/te-slider.js"></script>
+    <script src="dist/Neutron-slider.js"></script>
     <script>
         $(document).ready(function(){
-            $('.my-slider').teSlider();
+            $('.my-slider').neutronSlider();
         });
     </script>
 </body>
@@ -35,7 +35,7 @@ Include jQuery and the plugin's JavaScript and CSS files in your HTML:
 
 ## Options
 
-You can pass an options object to the `teSlider` function to customize the slider.
+You can pass an options object to the `neutronSlider` function to customize the slider.
 
 | Option | Type | Default | Description |
 | --- | --- | --- | --- |
@@ -52,16 +52,16 @@ You can pass an options object to the `teSlider` function to customize the slide
 | `dots` | `boolean` | `false` | Shows navigation dots. |
 | `dotsClass` | `string` | `'te-dots'` | CSS class for the dots container. |
 | `appendDots` | `string | JQuery | null` | `null` | Element to append the dots to. Defaults to the slider container. |
-| `customPaging` | `(slider: TeSlider, i: number) => JQuery` | `...` | Custom paging function for the dots. |
+| `customPaging` | `(slider: neutronSlider, i: number) => JQuery` | `...` | Custom paging function for the dots. |
 | `accessibility` | `boolean` | `true` | Enables keyboard navigation and ARIA attributes. |
 | `adaptiveHeight` | `boolean` | `false` | Adjusts the slider height to the current slide's height. |
 | `fade` | `boolean` | `false` | Enables fade transition instead of sliding. |
 | `initialSlide` | `number` | `0` | The slide to start on. |
 | `centerClass` | `string` | `'scaled'` | CSS class for the centered slide in center mode. |
-| `onInit` | `((slider: TeSlider) => void) | null` | `null` | Callback function after the slider is initialized. |
+| `onInit` | `((slider: neutronSlider) => void) | null` | `null` | Callback function after the slider is initialized. |
 | `onBeforeChange` | `((oldSlide: number, newSlide: number) => void) | null` | `null` | Callback function before a slide changes. |
 | `onAfterChange` | `((currentSlide: number) => void) | null` | `null` | Callback function after a slide changes. |
-| `onDuringChange` | `((slider: TeSlider) => void) | null` | `null` | Callback function during a slide change. |
+| `onDuringChange` | `((slider: neutronSlider) => void) | null` | `null` | Callback function during a slide change. |
 
 ### Responsive Settings Example
 
@@ -87,7 +87,7 @@ responsive: [
 You can call methods on the slider instance.
 
 ```javascript
-const slider = $('.my-slider').data('teSlider');
+const slider = $('.my-slider').data('neutronSlider');
 
 // Go to a specific slide
 slider.publicGoTo(2);
