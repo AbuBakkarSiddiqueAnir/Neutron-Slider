@@ -1,5 +1,4 @@
-/* Basic Slider Styles */
-.te-slider {
+.neutron-slider {
     position: relative;
     display: block;
     box-sizing: border-box;
@@ -14,7 +13,7 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-.te-slider-list {
+.neutron-slider-list {
     position: relative;
     overflow: hidden;
     display: block;
@@ -22,7 +21,7 @@
     padding: 0;
 }
 
-.te-slider-track {
+.neutron-slider-track {
     position: relative;
     top: 0;
     left: 0;
@@ -31,7 +30,7 @@
     margin-right: auto;
 }
 
-.te-slide {
+.neutron-slide {
     display: none;
     float: left;
     height: 100%;
@@ -39,27 +38,27 @@
     outline: none;
 }
 
-.te-slide img {
+.neutron-slide img {
     width: 100%;
     height: auto;
 }
 
-.te-slide.te-slide-active {
+.neutron-slide.neutron-slide-active {
     display: block;
 }
 
 /* Center Mode */
-.te-slide.scaled {
+.neutron-slide.center-slide {
     transform: scale(0.8);
     transition: transform 300ms ease;
 }
 
-.te-slide.active.scaled {
+.neutron-slide.active.center-slide {
     transform: scale(1);
 }
 
 /* Dots */
-.te-dots {
+.neutron-dots {
     position: absolute;
     bottom: -25px;
     display: block;
@@ -70,7 +69,7 @@
     text-align: center;
 }
 
-.te-dots li {
+.neutron-dots li {
     position: relative;
     display: inline-block;
     width: 20px;
@@ -80,7 +79,7 @@
     cursor: pointer;
 }
 
-.te-dots li button {
+.neutron-dots li button {
     font-size: 0;
     line-height: 0;
     display: block;
@@ -94,7 +93,7 @@
     background: transparent;
 }
 
-.te-dots li button:before {
+.neutron-dots li button:before {
     font-family: 'slick';
     font-size: 6px;
     line-height: 20px;
@@ -111,13 +110,13 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.te-dots li.active button:before {
+.neutron-dots li.active button:before {
     opacity: .75;
     color: black;
 }
 
 /* Arrows */
-.te-prev, .te-next {
+.neutron-prev, .neutron-next {
     font-size: 20px;
     line-height: 1;
     position: absolute;
@@ -136,10 +135,10 @@
     color: black;
 }
 
-.te-prev {
+.neutron-prev {
     left: -25px;
 }
 
-.te-next {
+.neutron-next {
     right: -25px;
 }

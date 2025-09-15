@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>te-slider Example</title>
-    <link rel="stylesheet" href="te-slider.css">
+    <link rel="stylesheet" href="index.css">
     <style>
         body {
             font-family: sans-serif;
@@ -19,25 +19,25 @@
 <body>
 
     <div class="slider-container">
-        <div class="te-slider">
-            <div><img src="https://via.placeholder.com/800x300/ff0000/ffffff?text=Slide+1"></div>
-            <div><img src="https://via.placeholder.com/800x300/00ff00/ffffff?text=Slide+2"></div>
-            <div><img src="https://via.placeholder.com/800x300/0000ff/ffffff?text=Slide+3"></div>
-            <div><img src="https://via.placeholder.com/800x300/ffff00/000000?text=Slide+4"></div>
-            <div><img src="https://via.placeholder.com/800x300/ff00ff/ffffff?text=Slide+5"></div>
+        <div class="neutron-slider">
+            <div><img src="https://placehold.co/600x400?text=Slide+1"></div>
+            <div><img src="https://placehold.co/600x400?text=Slide+2"></div>
+            <div><img src="https://placehold.co/600x400?text=Slide+3"></div>
+            <div><img src="https://placehold.co/600x400?text=Slide+4"></div>
+            <div><img src="https://placehold.co/600x400?text=Slide+5"></div>
         </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="dist/te-slider.js"></script>
+    <script src="dist/index.umd.js"></script>
     <script>
         $(document).ready(function(){
-            $('.te-slider').teSlider({
+            $('.neutron-slider').neutronSlider({
                 slidesToShow: 3,
                 centerMode: true,
                 dots: true,
                 loop: true,
-                autoplay: true
+                autoplay: false
             });
         });
     </script>
