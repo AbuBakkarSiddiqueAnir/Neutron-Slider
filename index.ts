@@ -22,6 +22,7 @@ interface NeutronSliderOptions {
   nextArrow: string | JQuery | null;
   loop: boolean;
   dots: boolean;
+  pauseOnHover: boolean,
   dotsClass: string;
   appendDots: string | JQuery | null;
   customPaging: (slider: NeutronSlider, i: number) => JQuery;
@@ -51,6 +52,7 @@ class NeutronSlider {
     nextArrow: null,
     loop: true,
     dots: false,
+    pauseOnHover: true,
     dotsClass: "neutron-dots",
     customPaging: (slider: NeutronSlider, i: number) => {
       return $('<button type="button"></button>').text(i + 1);
@@ -269,6 +271,12 @@ class NeutronSlider {
       "touchend.neutronSlider mouseleave.neutronSlider",
       this.#onSwipeEnd.bind(this)
     );
+    $(window).on("resize.neutronSlider." + this.InstanceUid,this.onResize.bind(this));
+
+    if (this.options.autoplay && this.options.pauseOnHover) {
+       this.$slider.on('mouseenter.neutronSlider',this.stopAutoplay.bind(this));
+       this.$slider.on('mouseleave.neutronSlider',this.startAutoplay.bind(this));
+    }
   }
 
   #onSwipeStart(e:JQuery.TouchStartEvent | JQuery.MouseDownEvent) {

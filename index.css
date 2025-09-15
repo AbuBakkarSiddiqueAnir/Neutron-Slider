@@ -31,7 +31,7 @@
 }
 
 .neutron-slide {
-    display: none;
+    display: block;
     float: left;
     height: 100%;
     min-height: 1px;
@@ -44,7 +44,7 @@
 }
 
 .neutron-slide.neutron-slide-active {
-    display: block;
+    /* display: block; */
 }
 
 /* Center Mode */
